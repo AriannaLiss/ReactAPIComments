@@ -1,0 +1,29 @@
+
+.comment{
+    margin: 1rem 0;
+}
+
+.comment__body{
+    padding: 1.5rem;
+    background-color: rgba(173, 216, 230, 0.47);
+    border-radius: 2rem;
+}
+
+.comment__author{
+    font-weight: bold;
+    display: block;
+    text-transform: capitalize;
+}
+
+.comment__actions{
+    padding: 0 1.5rem;
+    display:flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: grey;
+}
+
+.delete__btn:hover{
+    color:rgb(112, 3, 3);
+}
