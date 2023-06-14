@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ReactAPIComments/static/css/main.ec839a47.css",
-    "main.js": "/ReactAPIComments/static/js/main.88f2c66c.js",
+    "main.css": "/ReactAPIComments/static/css/main.9460c04c.css",
+    "main.js": "/ReactAPIComments/static/js/main.6b1821ee.js",
     "index.html": "/ReactAPIComments/index.html",
-    "main.ec839a47.css.map": "/ReactAPIComments/static/css/main.ec839a47.css.map",
-    "main.88f2c66c.js.map": "/ReactAPIComments/static/js/main.88f2c66c.js.map"
+    "main.9460c04c.css.map": "/ReactAPIComments/static/css/main.9460c04c.css.map",
+    "main.6b1821ee.js.map": "/ReactAPIComments/static/js/main.6b1821ee.js.map"
   },
   "entrypoints": [
-    "static/css/main.ec839a47.css",
-    "static/js/main.88f2c66c.js"
+    "static/css/main.9460c04c.css",
+    "static/js/main.6b1821ee.js"
   ]
 }
