@@ -1,10 +1,10 @@
+import React from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
-import React, { useEffect, useState } from 'react';
 
 const Modal = ({open, handleClose,title, submitText, submitHandle, comment, setComment, isEdit}) => {
 
@@ -20,15 +20,16 @@ const Modal = ({open, handleClose,title, submitText, submitHandle, comment, setC
         <Dialog open={open} onClose={handleClose}>
             <DialogTitle>{title}</DialogTitle>
             <DialogContent margin='normal'>
-                {isEdit ?
-                    <div><span className='comment__author'>{comment.name}</span> said:</div> :
-                    <TextField
+                {isEdit
+                    ? <div><span className='comment__author'>{comment.name}</span> said:</div>
+                    : <TextField
                         label='Name'
                         id='name'
                         fullWidth
                         value={comment.name}
                         onChange={(e)=>{setName(e.target.value)}}
-                    />}
+                        autoFocus = {!isEdit}
+                      />}
                 <TextField
                     margin='normal'
                     label='Body'
@@ -39,6 +40,7 @@ const Modal = ({open, handleClose,title, submitText, submitHandle, comment, setC
                     value={comment.body}
                     onChange={(e)=>setBody(e.target.value)}
                     rows='5'
+                    autoFocus = {isEdit}
                 />
             </DialogContent>
             <DialogActions>

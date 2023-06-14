@@ -6,18 +6,13 @@ export function get(url = URL){
     return fetch(url);
 }
 
-export function deleteComment(id, url = URL1){
-    return fetch(url+id, {
-        method: 'DELETE',
-      });
-}
-
 export function post(name='author', body='comment', url = URL){
     return fetch(url,{
         method: 'POST',
         body: JSON.stringify({
             name: name,
             body: body,
+            postId: 5, 
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
@@ -27,13 +22,20 @@ export function post(name='author', body='comment', url = URL){
 
 export function put(id=1, name='author', body='comment', url = URL1){
     return fetch(url+id,{
-        method: 'PUT',
+        method: 'PATCH',
         body: JSON.stringify({
-            name: name,
-            body: body,
+            id: id, 
+            name: name, 
+            body: body
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
         },
     })
+}
+
+export function deleteComment(id, url = URL1){
+    return fetch(url+id, {
+        method: 'DELETE',
+      });
 }
