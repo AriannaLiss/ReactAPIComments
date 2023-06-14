@@ -3,8 +3,8 @@ import './Comments.css'
 
 const Comments = ({comments, delComment, handleOpenModal}) => {
     return (
-        <div>
-            {comments&&comments.map(comment => 
+        <div className="comments__container">
+            {comments&&comments.length ? comments.map(comment => 
                 <div key={comment.id} className="comment">
                     <div className='comment__body'>
                         <span className='comment__author'>{comment.name}</span>
@@ -15,7 +15,7 @@ const Comments = ({comments, delComment, handleOpenModal}) => {
                         <div className="btn delete__btn" onClick={()=>delComment(comment.id)}>delete</div>
                     </div>
                 </div>
-            )}
+            ) : 'No any comments yet...'}
         </div>
     );
 };

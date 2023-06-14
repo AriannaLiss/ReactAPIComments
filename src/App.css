@@ -12,7 +12,18 @@ a{
 }
 
 .container{
-    margin: 1rem;
+    margin: 0;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.alert{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
 }
 
 .btn:hover{

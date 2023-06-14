@@ -1,13 +1,39 @@
-const URL = 'https://jsonplaceholder.typicode.com/post/1/comments'
+const URL = 'https://jsonplaceholder.typicode.com/posts/5/comments'
+const URL1 = 'https://jsonplaceholder.typicode.com/comments/'
 
-export async function get(url = URL){
-    const response = await fetch(url)
-    return await response.json();
+
+export function get(url = URL){
+    return fetch(url);
 }
 
-export async function deleteComment(id, url = URL){
-    const response = await fetch('https://jsonplaceholder.typicode.com/post/1/',{//url + '/' + id, {
-        method: 'DELETE'
+export function deleteComment(id, url = URL1){
+    return fetch(url+id, {
+        method: 'DELETE',
+      });
+}
+
+export function post(name='author', body='comment', url = URL){
+    return fetch(url,{
+        method: 'POST',
+        body: JSON.stringify({
+            name: name,
+            body: body,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
     })
-    return await response.json();
+}
+
+export function put(id=1, name='author', body='comment', url = URL1){
+    return fetch(url+id,{
+        method: 'PUT',
+        body: JSON.stringify({
+            name: name,
+            body: body,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
 }

@@ -15,8 +15,6 @@ const Modal = ({open, handleClose,title, submitText, submitHandle, comment, setC
     const setBody = (body) => {
         setComment(prev => {return{...prev, body:body}})
     }
-
-    useEffect(()=>{console.log(comment)},[comment])
       
     return (
         <Dialog open={open} onClose={handleClose}>
